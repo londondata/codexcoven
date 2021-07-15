@@ -1,0 +1,31 @@
+{
+	"name": "codexcoven",
+	"version": "1.0.0",
+	"description": "a social journal app for modern day witches",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "open http://localhost:4000 & nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/terilondon/codexcoven.git"
+	},
+	"keywords": [
+		"astrology",
+		"witchcraft",
+		"tarot"
+	],
+	"author": "Teri London",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/terilondon/codexcoven/issues"
+	},
+	"homepage": "https://github.com/terilondon/codexcoven#readme",
+	"dependencies": {
+		"ejs": "^3.1.6",
+		"express": "^4.17.1",
+		"method-override": "^3.0.0",
+		"mongoose": "^5.13.2"
+	}
+}
