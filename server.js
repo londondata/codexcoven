@@ -2,8 +2,7 @@
 const express = require("express");
 const methodOverride = require("method-override");
 
-/* ==== Internal Modules ==== */
-const homeRouter = require("./routes/index");
+/* ==== Internal Modules ==== */ 
 
 /* ==== Instanced Modules  ==== */
 const app = express();
@@ -19,9 +18,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 // serve public files
 app.use(express.static("public"));
+// logger
+app.use((req, res, next) => {
+	console.log(req.url, res.method);
+	next();
+});
 
-/* ====  Routes  ==== */
-app.use("/", homeRouter);
+/* ====  Routes & Controllers  ==== */
+// Home Route
+app.get("/", (req, res) => {
+	res.render("home");
+});
 
 /* ====  Server Listener  ==== */
 app.listen(PORT, () => {

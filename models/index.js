@@ -1,7 +1,7 @@
 // Mongoose DB Config
 const mongoose = require("mongoose");
-const connectionString = "mongodb://localhost:27017/codexcoven";
-const configOptions = {
+const dbUrl = "mongodb://localhost:27017/codexcoven";
+const configs = {
 	useNewUrlParser: true,
 	useCreateIndex: true,
 	useUnifiedTopology: true,
@@ -9,6 +9,8 @@ const configOptions = {
 };
 
 mongoose
-	.connect(connectionString, configOptions)
+	.connect(dbUrl, configs)
 	.then(() => console.log("MongoDB successfully connected!"))
 	.catch((err) => console.log(`MongoDB connection FAILED :( Error: ${err}`));
+
+
