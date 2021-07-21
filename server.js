@@ -2,13 +2,15 @@
 const express = require("express");
 const methodOverride = require("method-override");
 
-/* ==== Internal Modules ==== */ 
+/* ==== Internal Modules ==== */
+// const routes = require("./routes");
 
 /* ==== Instanced Modules  ==== */
 const app = express();
 
 /* ====  Configuration  ==== */
 const PORT = 4000;
+require("dotenv").config();
 app.set("view engine", "ejs");
 
 /* ====  Middleware  ==== */
@@ -20,15 +22,23 @@ app.use(methodOverride("_method"));
 app.use(express.static("public"));
 // logger
 app.use((req, res, next) => {
-	console.log(req.url, res.method);
+	console.log(req.url, req.method);
 	next();
 });
 
 /* ====  Routes & Controllers  ==== */
 // Home Route
 app.get("/", (req, res) => {
-	res.render("home");
+	res.render("index");
 });
+// 404 route
+app.get((req, res) => {
+	res.send("404! Error! Page not found :(");
+});
+// Internal Routes
+// app.use("/users", routes.users);
+// app.use("/entries", routes.entries);
+// app.use("/comments", routes.comments);
 
 /* ====  Server Listener  ==== */
 app.listen(PORT, () => {
