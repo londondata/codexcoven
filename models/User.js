@@ -7,13 +7,14 @@ const Schema = mongoose.Schema;
 const journalSchema = new Schema({
 	title: { type: String },
 	bio: { type: String },
-	picture: { type: mongoose.type.url },
+	// picture: { type: mongoose.type.url },
 });
 
 const userSchema = new Schema(
 	{
 		name: { type: String, required: true },
 		birthdate: { type: Date, required: true },
+		googleId: String,
 		// embedded journal schema, 1:1 relationship
 		journal: journalSchema,
 		entries: [{ type: Schema.Types.ObjectId, ref: "Entry" }],
