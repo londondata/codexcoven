@@ -6,9 +6,16 @@ const index = (req, res, next) => {
 			users,
 			user: req.user,
 		});
+		console.log(user);
 	});
+};
+
+const isLoggedIn = (req, res, next) => {
+	if (req.isAuthenticated()) return next();
+	res.redirect("/auth/google");
 };
 
 module.exports = {
 	index,
+	isLoggedIn,
 };

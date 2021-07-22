@@ -10,7 +10,6 @@ const configs = {
 	useUnifiedTopology: true,
 	useFindAndModify: false,
 };
-
 mongoose
 	.connect(process.env.DATABASE_URL || dbUrl, configs)
 	.then(() =>

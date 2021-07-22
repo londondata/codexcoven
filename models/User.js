@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
 
 const journalSchema = new Schema({
 	title: { type: String },
+	birthdate: { type: Date, required: true },
 	bio: { type: String },
 	// picture: { type: mongoose.type.url },
 });
@@ -13,7 +14,7 @@ const journalSchema = new Schema({
 const userSchema = new Schema(
 	{
 		name: { type: String, required: true },
-		birthdate: { type: Date, required: true },
+		email: { type: String, required: true },
 		googleId: String,
 		// embedded journal schema, 1:1 relationship
 		journal: journalSchema,

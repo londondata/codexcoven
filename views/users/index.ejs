@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<table id="list">
+	<thead>
+		<tr>
+			<th>User</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% users.forEach(function(u) { %>
+		<tr>
+			<td><%= u %></td>
+			<!-- <td><%= u.releaseYear %></td>
+        <td><a href="/movies/<%= m._id %>">DETAILS</a></td> -->
+		</tr>
+		<% }); %>
+	</tbody>
+</table>
+
+<%- include('../partials/footer') %>

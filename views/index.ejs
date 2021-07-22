@@ -7,6 +7,17 @@
 		<title>Codex Coven</title>
 	</head>
 	<body>
+		<nav>
+			<ul class="right">
+				<li>
+					<% if (user) { %>
+					<a href="/logout">Log Out</a>
+					<% } else { %>
+					<a href="/auth/google">Login with Google</a>
+					<% } %>
+				</li>
+			</ul>
+		</nav>
 		<h1>welcome to the codex coven</h1>
 	</body>
 </html>

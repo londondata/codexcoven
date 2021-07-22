@@ -1,3 +1,4 @@
+require("dotenv").config();
 /* ==== External Modules ==== */
 const express = require("express");
 const methodOverride = require("method-override");
@@ -10,7 +11,7 @@ const app = express();
 
 /* ====  Configuration  ==== */
 const PORT = process.env.PORT || 4000;
-require("dotenv").config();
+
 require("./auth/passport");
 app.set("view engine", "ejs");
 
@@ -49,7 +50,6 @@ app.get("/", (req, res) => {
 	});
 });
 
-
 // 404 route
 app.get((req, res) => {
 	res.send("404! Error! Page not found :(");
@@ -58,7 +58,7 @@ app.get((req, res) => {
 app.use("/users", routes.users);
 app.use("/entries", routes.entries);
 app.use("/comments", routes.comments);
-app.use("/auth", routes.auth);
+app.use("/", routes.auth);
 
 /* ====  Server Listener  ==== */
 app.listen(PORT, () => {

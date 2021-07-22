@@ -1,13 +1,13 @@
 <mxfile>
     <diagram id="hK5erOVCf_QydWKk-YI4" name="Page-1">
-        <mxGraphModel dx="556" dy="252" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1031" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="User" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="440" y="190" width="190" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="_id: ObjectId&#10;Name: Str&#10;Birthdate: Date&#10;Journal: ref Journal&#10;Entries: [ ref Entry ]&#10;Comments: [ ref Comment ]&#10;&#10;&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="2" vertex="1">
+                <mxCell id="3" value="_id: ObjectId&#10;Name: Str&#10;Journal: ref Journal&#10;Entries: [ ref Entry ]&#10;Comments: [ ref Comment ]&#10;&#10;&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="2" vertex="1">
                     <mxGeometry y="30" width="190" height="130" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="Comment" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
@@ -19,7 +19,7 @@
                 <mxCell id="6" value="Journal" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="150" y="365" width="180" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="__id: ObjectId&#10;Title: Str&#10;Picture: Img&#10;Bio: Str&#10;Horoscope: { Obj } &#10;User: [ ref User ]&#10;Entries [ ref Entry ]&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="6" vertex="1">
+                <mxCell id="7" value="__id: ObjectId&#10;Title: Str&#10;Birthdate: Date&#10;Picture: Img&#10;Bio: Str&#10;Horoscope: { Obj } &#10;User: [ ref User ]&#10;Entries [ ref Entry ]&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="6" vertex="1">
                     <mxGeometry y="30" width="180" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="Entry" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=16;" parent="1" vertex="1">
